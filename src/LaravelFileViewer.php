@@ -6,14 +6,14 @@ use Illuminate\Support\Facades\Storage;
 
 class LaravelFileViewer
 {
-    public function show(String $filename,String $filePath,String $file_url,$file_data=[])
+    public function show(String $filename, String $filePath, String $file_url, $file_data = [], $disk = 'storage')
     {
-      if (!Storage::exists($filePath)) {
+      if (!Storage::disk($disk)->exists($filePath)) {
         abort(404,__("file_not_found_or_deleted"));
       }
-      $type = Storage::mimeType($filePath);
+      $type = Storage::disk($disk)->mimeType($filePath);
       $metadata = [
-        'size' => Storage::size($filePath)
+        'size' => Storage::disk($disk)->size($filePath)
       ];
       $icon_class=$this->getIconClass($type);
       $filesizenyteformat=$this->formatBytes($metadata['size']);
