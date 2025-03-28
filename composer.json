@@ -1,17 +1,17 @@
 {
-    "name": "vish4395/laravel-file-viewer",
+    "name": "anhlnq0604/laravel-file-viewer",
     "description": "A basic file viewer for Laravel projects",
     "keywords": [
-        "vish4395",
+        "anhlnq0604",
         "laravel-file-viewer"
     ],
-    "homepage": "https://github.com/vish4395/laravel-file-viewer",
+    "homepage": "https://github.com/anhlnq0604/laravel-file-viewer",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Vishal Sharma",
-            "email": "vishal@newai.in",
+            "name": "Le Nguyen Quang Anh",
+            "email": "anhlnq0604@gmail.com",
             "role": "Developer"
         }
     ],
@@ -25,18 +25,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Vish4395\\LaravelFileViewer\\": "src"
+            "Anhlnq0604\\LaravelFileViewer\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Vish4395\\LaravelFileViewer\\Tests\\": "tests"
+            "Anhlnq0604\\LaravelFileViewer\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true
@@ -44,10 +43,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Vish4395\\LaravelFileViewer\\LaravelFileViewerServiceProvider"
+                "Anhlnq0604\\LaravelFileViewer\\LaravelFileViewerServiceProvider"
             ],
             "aliases": {
-                "LaravelFileViewer": "Vish4395\\LaravelFileViewer\\LaravelFileViewerFacade"
+                "LaravelFileViewer": "Anhlnq0604\\LaravelFileViewer\\LaravelFileViewerFacade"
             }
         }
     }

@@ -12,17 +12,17 @@ Laravel File Viewer is a wrapper for implementing different JS libraries to view
 You can install the package via composer:
 
 ```bash
-composer require vish4395/laravel-file-viewer
+composer require anhlnq0604/laravel-file-viewer
 ```
 
 Publish assets 
 ```bash
-php artisan vendor:publish  --provider="Vish4395\LaravelFileViewer\LaravelFileViewerServiceProvider" --tag=assets
+php artisan vendor:publish  --provider="Anhlnq0604\LaravelFileViewer\LaravelFileViewerServiceProvider" --tag=assets
 ```
 
 Publish views (optional)(for customize ui) 
 ```bash
-php artisan vendor:publish  --provider="Vish4395\LaravelFileViewer\LaravelFileViewerServiceProvider" --tag=views
+php artisan vendor:publish  --provider="Anhlnq0604\LaravelFileViewer\LaravelFileViewerServiceProvider" --tag=views
 ```
 
 ## Usage
@@ -31,7 +31,7 @@ Add alias
 
 ```php
     'aliases' => Facade::defaultAliases()->merge([
-        'LaravelFileViewer' => Vish4395\LaravelFileViewer\LaravelFileViewerFacade::class,
+        'LaravelFileViewer' => Anhlnq0604\LaravelFileViewer\LaravelFileViewerFacade::class,
     ])->toArray(),
 ```
 
@@ -42,6 +42,7 @@ use LaravelFileViewer;
  * ...
  */
 public function file_preview($filename){
+        $disk='storage'
         $filepath='public/'.$filename;
         $file_url=asset('storage/'.$filename);
         $file_data=[
@@ -50,7 +51,7 @@ public function file_preview($filename){
             'value' => "Value"
           ]
         ];
-        return LaravelFileViewer::show($filename,$filepath,$file_url,$file_data);
+        return LaravelFileViewer::show($filename,$filepath,$file_url,$file_data,$disk);
       }
 ```
 
